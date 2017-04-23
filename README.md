@@ -25,10 +25,7 @@ export default Ember.Component.extend({
         var uri = "ws://78.88.254.231:5000";
         var wsavc = new WSAvcPlayer(canvas, "webgl", 1, 35);
         wsavc.connect(uri);
-        //expose instance for button callbacks
-        window.wsavc = wsavc;
         setTimeout(function() {
-          debugger;
           wsavc.playStream()
         }, 2000)
     }, 2000)
